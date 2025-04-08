@@ -16,7 +16,7 @@ it allows you to execute CRUD operations on your tasks which are saved in a loca
 
 ---
 
-## 🏗️ Project Structure
+## Project structure
 
 ```
 oop_task.py          # defines task class
@@ -29,8 +29,6 @@ task.py              # same program whitout OOP principles
 ```
 
 ---
-
-## Run the program
 
 ### Prerequisites
 - Python 3 installed
