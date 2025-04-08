@@ -35,7 +35,7 @@ class TaskManager:
 
     def add_task(self, description):
         # adds a new task with description 
-        tasks = self.load_task()
+        tasks = self.load_tasks()
         task_id = len(tasks) + 1
         new_task = Task(task_id, description)
         tasks.append(new_task)
@@ -45,10 +45,11 @@ class TaskManager:
 
     def list_tasks(self, status_filter = None):
         # lists all tasks and filters em by status 
-        task = self.load_tasks()
+        tasks = self.load_tasks()
         if status_filter:
             tasks = [task for task in tasks if task.status == status_filter]
             # list comprehension
+        return tasks
     
     def get_task (self, task_id):
         # gets a task by id
@@ -80,5 +81,4 @@ class TaskManager:
         
         self.save_tasks(new_tasks)
         return True
-        # if task was deleted 
-    
+        # if task was deleted

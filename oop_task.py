@@ -20,10 +20,10 @@ class Task:
         # convert the task to a dictionary 
         return {
             "id": self.id,
-            "descruition": self.description,
+            "description": self.description,
             "status": self.status,
             "created_at": self.created_at,
-            "updated_at": self. updated_at
+            "updated_at": self.updated_at
         }
 
     """@classmethod is a built-in decorator in Python that transforms 
@@ -37,8 +37,8 @@ class Task:
         #create task object from dictionary 
         task = cls(task_dict["id"], task_dict["description"])
         task.status = task_dict["status"]
-        task.creted_at = task_dict["created_at"]
-        task.updeted_at = task_dict["updeted_at"]
+        task.created_at = task_dict["created_at"]
+        task.updated_at = task_dict["updeted_at"]
         return task
     
     def __str__ (self):

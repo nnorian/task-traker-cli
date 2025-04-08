@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 1,
+        "descruition": "complete the python assignement",
+        "status": "todo",
+        "created_at": "2025-04-08T12:39:35.519945",
+        "updated_at": "2025-04-08T12:39:35.519945"
+    }
+]
