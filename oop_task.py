@@ -38,7 +38,7 @@ class Task:
         task = cls(task_dict["id"], task_dict["description"])
         task.status = task_dict["status"]
         task.created_at = task_dict["created_at"]
-        task.updated_at = task_dict["updeted_at"]
+        task.updated_at = task_dict["updated_at"]
         return task
     
     def __str__ (self):

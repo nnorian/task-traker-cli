@@ -13,7 +13,7 @@ class TaskApp:
         print("~commands for task manager app~")
         print(" add <description> - add a new task")
         print(" list - lists all tasks ")
-        print(" list<status> - list tasks with a pecific status ")
+        print(" list<status> - list tasks with a specific status ")
         print(" update <id> <status> - update task status ")
         print(" delete <id> - deletes a task")
         print(" mark-in-progress <id> - marks task as in progress")
@@ -90,7 +90,7 @@ class TaskApp:
             print("error: missing task id")
             return
         try:
-            ask_id = int(args[0])
+            task_id = int(args[0])
             task = self.task_manager.update_task(task_id, status)
 
             if task:
