@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+
 working_file = "task.json"
 from datetime import datetime
 
@@ -41,13 +42,13 @@ def add_task(description):
     print(f"task added{task_id}: {description}")
     
     # list all the tasks as no filter by status is applied
-def list__tasks(status_filter = None):
+def list_tasks(status_filter = None):
     tasks = load_tasks()
     if status_filter:
         tasks= [ task for task in tasks if task["status"] == status_filter]
         # list comprehension that filters the tasks with the needed status
     for task in tasks:
-        print(f"{task["id"]}: {task["description"]} - {task[status]} - {tas["created_at"]} - {task["updated_at"]}")
+        print(f"{task["id"]}: {task["description"]} - {task["status"]} - {task["created_at"]} - {task["updated_at"]}")
 
 def update_task(task_id, status ):
     tasks = load_tasks()
@@ -72,12 +73,12 @@ def delete_task(task_id):
 
 def mark_status(task_id, status):
     tasks = load_tasks()
-    for task in rasks:
+    for task in tasks:
         if task["id"] == task_id:
             task["status"] = status
             task["updated_at"] = datatime.now().isoformat()
             save_tasks(tasks)
-            print(f"task {task_is} marked as {status}")
+            print(f"task {task_id} marked as {status}")
             return
     print("this task was not found ")
 
